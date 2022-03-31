@@ -1,9 +1,9 @@
+import { Fragment } from "react";
 
-const { Fragment } = require("react");
 
 const HomePage = () =>(
    <Fragment>
-      <h1>Home Page</h1>
+      <h1> HomePage</h1>
    </Fragment>
 );
 

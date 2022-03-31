@@ -1,26 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
 import './Hello'
 
 // pagges 
 import Home from './pages/Home/HomePage';
-import About from './pages/About/About';
+import Abount from './pages/About/AbountPage';
 import Contact from './pages/Contact/Contact';
+
 
 // Nav
 import Nav from './component/Nav';
-import { Route } from 'react-router-dom';
+
+import {Route, Routes} from 'react-router-dom';
 
 
 function APP(){
 
   return (
-    <div> 
+    <div className='App'> 
       <Nav/>
       <div className='containe'>
-        <Route exact={true} path="/" component={Home}></Route>     
-        <Route exact path="/about" component={About}></Route>    
-        <Route exact path="/contact" component={Contact}></Route>
+        <Routes>
+          <Route exact={true} path="/" element={<Home/>} />
+          <Route exact path="/about" element={<Abount/>} />
+          <Route exact path="/contact" element={<Contact/>} />
+        </Routes>
       </div>
     </div>
   )
