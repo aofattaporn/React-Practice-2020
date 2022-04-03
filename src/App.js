@@ -1,5 +1,4 @@
 import './App.css';
-import './Hello'
 
 // pagges 
 import Home from './pages/Home/HomePage';
@@ -17,16 +16,19 @@ function APP(){
 
   return (
     <div className='App'> 
-      <Nav/>
+
       <div className='containe'>
         <Routes>
-          <Route exact={true} path="/" element={<Home/>} />
-          <Route exact path="/about" element={<Abount/>} />
-          <Route exact path="/contact" element={<Contact/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<Abount/>} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </div>
     </div>
   )
 }
+
+// style component 
+
 
 export default APP;
