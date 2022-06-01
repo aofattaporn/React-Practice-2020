@@ -1,12 +1,11 @@
 
 import styled from 'styled-components';
-import Nav from "../../component/Nav";
 
 
 
 const HomePage = () =>(
    <Board > 
-      <Nav/>
+      <Nav2/>
       <h1>Hello world</h1>
    </Board>
 

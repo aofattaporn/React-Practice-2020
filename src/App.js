@@ -1,29 +1,23 @@
+import { Route, Router, Routers } from 'react-router-dom';
 import './App.css';
+import Navigation from './component/Navigation';
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 // pagges 
-import Home from './pages/Home/HomePage';
-import Abount from './pages/About/AbountPage';
-import Contact from './pages/Contact/Contact';
+import HomePage from './pages/Home/HomePage';
 
 
-// Nav
-import Nav from './component/Nav';
-
-import {Route, Routes} from 'react-router-dom';
 
 
 function APP(){
 
   return (
     <div className='App'> 
+      <Navigation/>
+      <Routers>
+        <Route path='/' element={HomePage}> HomePage </Route>
 
-      <div className='containe'>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<Abount/>} />
-          <Route path="/contact" element={<Contact/>} />
-        </Routes>
-      </div>
+      </Routers>
     </div>
   )
 }
